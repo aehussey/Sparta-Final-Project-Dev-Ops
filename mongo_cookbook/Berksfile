@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+source 'https://supermarket.chef.io'
+
+cookbook 'mongo', git: 'https://github.com/ARLeslie95/ChefMongoConfiguration.git'
+
+cookbook 'node', git: 'https://github.com/ARLeslie95/NginxReverseProxyCookbook.git'
+
+metadata
