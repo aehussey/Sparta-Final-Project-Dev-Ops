@@ -28,5 +28,14 @@
       "cookbook_paths": ["./cookbooks"],
       "install_command": "curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -v 13.3.42",
       "run_list": ["node::default"]
+    },
+    {
+      "type": "shell",
+      "inline": ["mkdir /home/ubuntu/app"]
+    },
+    {
+      "type": "file",
+      "source": "app/",
+      "destination": "/home/ubuntu/app"
     }]
 }

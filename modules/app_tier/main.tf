@@ -4,7 +4,7 @@ resource "aws_subnet" "app" {
   vpc_id = "${var.app_vpc}"
   cidr_block = "10.17.0.0/24"
   map_public_ip_on_launch = true
-  availability_zone = "eu-west-1a"
+  availability_zone = "eu-west-1c"
   tags = {
     Name = "${var.name}"
   }
@@ -23,11 +23,25 @@ resource "aws_security_group" "app"  {
     cidr_blocks     = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port       = "22"
+    to_port         = "22"
+    protocol        = "tcp"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port       = 0
     to_port         = 0
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port       = "22"
+    to_port         = "22"
+    protocol        = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   tags = {
@@ -76,6 +90,24 @@ resource "aws_network_acl" "app" {
     to_port    = 65535
   }
 
+  egress {
+    protocol = "tcp"
+    rule_no = 130
+    action = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port = 22
+    to_port = 22
+  }
+
+  ingress {
+    protocol = "tcp"
+    rule_no = 130
+    action = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port = 22
+    to_port = 22
+  }
+
   subnet_ids   = ["${aws_subnet.app.id}"]
 
   tags = {
@@ -109,6 +141,7 @@ resource "aws_instance" "app" {
   vpc_security_group_ids = ["${aws_security_group.app.id}"]
   user_data = "${var.template_file}"
   instance_type = "t2.micro"
+  key_name = "${var.key_name}"
   tags = {
       Name = "${var.name}"
   }

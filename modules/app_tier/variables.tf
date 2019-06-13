@@ -26,3 +26,7 @@ variable "internet_gateway" {
 variable "template_file" {
   description = "template_file"
 }
+
+variable "key_name" {
+  description = "key_name"
+}

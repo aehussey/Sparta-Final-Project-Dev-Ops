@@ -7,6 +7,7 @@ module "app" {
   app_vpc = "${aws_vpc.app.id}"
   internet_gateway = "${aws_internet_gateway.app.id}"
   template_file = "${data.template_file.app_init.rendered}"
+  key_name = "${aws_key_pair.default.key_name}"
 }
 
 module "db" {
@@ -41,6 +42,12 @@ resource "aws_internet_gateway" "app" {
     Name = "${var.name}"
   }
 }
+
+resource "aws_key_pair" "default" {
+  key_name = "Eng29-final-project"
+  public_key = "${file("~/.ssh/id_rsa.pub")}"
+}
+
 # load the init template
 data "template_file" "app_init" {
 template = "${file("./scripts/app/init.sh.tpl")}"

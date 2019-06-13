@@ -4,7 +4,7 @@ resource "aws_subnet" "db" {
   vpc_id = "${var.app_vpc}"
   cidr_block = "10.17.1.0/24"
   map_public_ip_on_launch = false
-  availability_zone = "eu-west-1a"
+  availability_zone = "eu-west-1c"
   tags = {
     Name = "${var.name}-db"
   }
