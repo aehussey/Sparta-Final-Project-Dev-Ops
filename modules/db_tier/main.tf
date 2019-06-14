@@ -1,12 +1,13 @@
 # DB
 # create a subnet
 resource "aws_subnet" "db" {
+  count = 3
   vpc_id = "${var.app_vpc}"
-  cidr_block = "10.17.1.0/24"
+  cidr_block = "${element(var.subnets, count.index)}"
   map_public_ip_on_launch = false
-  availability_zone = "eu-west-1c"
+  availability_zone = "${element(var.availability_zones, count.index)}"
   tags = {
-    Name = "${var.name}-db"
+    Name = "${var.name}-db-${count.index}"
   }
 }
 
@@ -36,13 +37,14 @@ resource "aws_security_group" "db"  {
 }
 
 resource "aws_network_acl" "db" {
+  count = 3
   vpc_id = "${var.app_vpc}"
 
   ingress {
     protocol   = "tcp"
     rule_no    = 100
     action     = "allow"
-    cidr_block = "${var.subnet_cidr_block}"
+    cidr_block = "${var.subnet_cidr_blocks[count.index]}"
     from_port  = 27017
     to_port    = 27017
   }
@@ -53,15 +55,15 @@ resource "aws_network_acl" "db" {
     protocol   = "tcp"
     rule_no    = 120
     action     = "allow"
-    cidr_block = "${var.subnet_cidr_block}"
+    cidr_block = "${var.subnet_cidr_blocks[count.index]}"
     from_port  = 1024
     to_port    = 65535
   }
 
-  subnet_ids   = ["${aws_subnet.db.id}"]
+  subnet_ids   = ["${aws_subnet.db[count.index].id}"]
 
   tags = {
-    Name = "${var.name}-db"
+    Name = "${var.name}-db-${count.index}"
   }
 }
 
@@ -75,17 +77,19 @@ resource "aws_route_table" "db" {
 }
 
 resource "aws_route_table_association" "db" {
-  subnet_id      = "${aws_subnet.db.id}"
+  count = 3
+  subnet_id      = "${aws_subnet.db[count.index].id}"
   route_table_id = "${aws_route_table.db.id}"
 }
 
 # launch an instance
 resource "aws_instance" "db" {
+  count = 3
   ami           = "${var.db_ami_id}"
-  subnet_id     = "${aws_subnet.db.id}"
+  subnet_id     = "${aws_subnet.db[count.index].id}"
   vpc_security_group_ids = ["${aws_security_group.db.id}"]
   instance_type = "t2.micro"
   tags = {
-      Name = "${var.name}-db"
+      Name = "${var.name}-db-${count.index}"
   }
 }

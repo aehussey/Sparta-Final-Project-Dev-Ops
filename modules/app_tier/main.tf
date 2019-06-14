@@ -1,12 +1,13 @@
 # APP
 # create a subnet
 resource "aws_subnet" "app" {
+  count = 3
   vpc_id = "${var.app_vpc}"
-  cidr_block = "10.17.0.0/24"
+  cidr_block = "${element(var.subnets, count.index)}"
   map_public_ip_on_launch = true
-  availability_zone = "eu-west-1c"
+  availability_zone = "${element(var.availability_zones, count.index)}"
   tags = {
-    Name = "${var.name}"
+    Name = "${var.name}-${count.index}"
   }
 }
 
@@ -50,6 +51,7 @@ resource "aws_security_group" "app"  {
 }
 
 resource "aws_network_acl" "app" {
+  count = 3
   vpc_id = "${var.app_vpc}"
 
   egress {
@@ -108,10 +110,10 @@ resource "aws_network_acl" "app" {
     to_port = 22
   }
 
-  subnet_ids   = ["${aws_subnet.app.id}"]
+  subnet_ids   = ["${aws_subnet.app[count.index].id}"]
 
   tags = {
-    Name = "${var.name}"
+    Name = "${var.name}-${count.index}"
   }
 }
 
@@ -130,19 +132,21 @@ resource "aws_route_table" "app" {
 }
 
 resource "aws_route_table_association" "app" {
-  subnet_id      = "${aws_subnet.app.id}"
+  count = 3
+  subnet_id      = "${aws_subnet.app[count.index].id}"
   route_table_id = "${aws_route_table.app.id}"
 }
 
 # launch an instance
 resource "aws_instance" "app" {
+  count = 3
   ami           = "${var.app_ami_id}"
-  subnet_id     = "${aws_subnet.app.id}"
+  subnet_id     = "${aws_subnet.app[count.index].id}"
   vpc_security_group_ids = ["${aws_security_group.app.id}"]
-  user_data = "${var.template_file}"
+  user_data = "${element(var.template_file, count.index)}"
   instance_type = "t2.micro"
   key_name = "${var.key_name}"
   tags = {
-      Name = "${var.name}"
+      Name = "${var.name}-${count.index}"
   }
 }

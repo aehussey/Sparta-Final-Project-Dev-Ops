@@ -30,3 +30,13 @@ variable "template_file" {
 variable "key_name" {
   description = "key_name"
 }
+
+variable "subnets" {
+  type = "list"
+  default = ["10.17.0.0/24", "10.17.10.0/24", "10.17.20.0/24"]
+}
+
+variable "availability_zones" {
+  type = "list"
+  default = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+}
