@@ -19,6 +19,8 @@ module "db" {
   app_vpc = "${aws_vpc.app.id}"
   security_groups = "${module.app.security_group_id}"
   subnet_cidr_blocks = "${module.app.subnet_cidr_blocks}"
+  key_name = "${aws_key_pair.default.key_name}"
+  internet_gateway = "${aws_internet_gateway.app.id}"
 }
 
 provider "aws" {

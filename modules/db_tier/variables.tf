@@ -36,3 +36,11 @@ variable "availability_zones" {
   type = "list"
   default = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
 }
+
+variable "key_name" {
+  description = "key_name"
+}
+
+variable "internet_gateway" {
+  description = "internet_gateway"
+}

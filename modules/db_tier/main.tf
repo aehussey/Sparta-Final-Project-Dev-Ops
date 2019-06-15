@@ -4,7 +4,7 @@ resource "aws_subnet" "db" {
   count = 3
   vpc_id = "${var.app_vpc}"
   cidr_block = "${element(var.subnets, count.index)}"
-  map_public_ip_on_launch = false
+  map_public_ip_on_launch = true
   availability_zone = "${element(var.availability_zones, count.index)}"
   tags = {
     Name = "${var.name}-db-${count.index}"
@@ -24,10 +24,25 @@ resource "aws_security_group" "db"  {
     security_groups = ["${var.security_groups}"]
   }
 
+  ingress {
+    from_port       = "22"
+    to_port         = "22"
+    protocol        = "tcp"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port       = 0
     to_port         = 0
     protocol        = "-1"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+
+
+  egress {
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
     cidr_blocks     = ["0.0.0.0/0"]
   }
 
@@ -60,6 +75,24 @@ resource "aws_network_acl" "db" {
     to_port    = 65535
   }
 
+  egress {
+    protocol   = "tcp"
+    rule_no    = 130
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 22
+    to_port    = 22
+  }
+
+  ingress {
+    protocol   = "tcp"
+    rule_no    = 130
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 22
+    to_port    = 22
+  }
+
   subnet_ids   = ["${aws_subnet.db[count.index].id}"]
 
   tags = {
@@ -70,6 +103,11 @@ resource "aws_network_acl" "db" {
 # public route table
 resource "aws_route_table" "db" {
   vpc_id = "${var.app_vpc}"
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = "${var.internet_gateway}"
+  }
 
   tags = {
     Name = "${var.name}-db-private"
@@ -89,6 +127,7 @@ resource "aws_instance" "db" {
   subnet_id     = "${aws_subnet.db[count.index].id}"
   vpc_security_group_ids = ["${aws_security_group.db.id}"]
   instance_type = "t2.micro"
+  key_name = "${var.key_name}"
   tags = {
       Name = "${var.name}-db-${count.index}"
   }
