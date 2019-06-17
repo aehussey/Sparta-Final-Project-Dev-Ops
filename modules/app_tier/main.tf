@@ -45,6 +45,10 @@ resource "aws_security_group" "app"  {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
+  lifecycle {
+    create_before_destroy = true
+  }
+
   tags = {
     Name = "${var.name}"
   }
@@ -137,16 +141,27 @@ resource "aws_route_table_association" "app" {
   route_table_id = "${aws_route_table.app.id}"
 }
 
-# launch an instance
-resource "aws_instance" "app" {
-  count = 3
-  ami           = "${var.app_ami_id}"
-  subnet_id     = "${aws_subnet.app[count.index].id}"
-  vpc_security_group_ids = ["${aws_security_group.app.id}"]
-  user_data = "${element(var.template_file, count.index)}"
+# launch configuration
+resource "aws_launch_configuration" "app" {
+  image_id           = "${var.app_ami_id}"
+  security_groups = ["${aws_security_group.app.id}"]
+  user_data = "${var.template_file.0}"
   instance_type = "t2.micro"
   key_name = "${var.key_name}"
-  tags = {
-      Name = "${var.name}-${count.index}"
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_autoscaling_group" "app" {
+  launch_configuration = "${aws_launch_configuration.app.id}"
+  availability_zones = "${var.availability_zones.*}"
+  min_size = 3
+  max_size = 3
+  vpc_zone_identifier = "${aws_subnet.app.*.id}"
+  tag {
+      key = "Name"
+      value = "${var.name}"
+      propagate_at_launch = true
   }
 }
