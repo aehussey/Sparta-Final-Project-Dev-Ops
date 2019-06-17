@@ -3,11 +3,11 @@ variable "name" {
 }
 
 variable "app_ami_id" {
-  default="ami-03e3239774cb68a47"
+  default="ami-0cc993bb92cca80d3"
 }
 
 variable "db_ami_id" {
-  default="ami-01020378"
+  default="ami-0f8fd53560ca320f6"
 }
 
 variable "cidr_block" {

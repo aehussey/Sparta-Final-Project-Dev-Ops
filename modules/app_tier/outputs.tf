@@ -5,6 +5,6 @@ output security_group_id {
 
 }
 
-output subnet_cidr_block {
-  value = "${aws_subnet.app.cidr_block}"
+output subnet_cidr_blocks {
+  value = "${aws_subnet.app.*.cidr_block}"
 }

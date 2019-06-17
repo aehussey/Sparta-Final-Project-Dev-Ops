@@ -6,7 +6,7 @@ module "app" {
   db_ami_id = "${var.db_ami_id}"
   app_vpc = "${aws_vpc.app.id}"
   internet_gateway = "${aws_internet_gateway.app.id}"
-  template_file = "${data.template_file.app_init.rendered}"
+  template_file = "${data.template_file.app_init.*.rendered}"
   key_name = "${aws_key_pair.default.key_name}"
 }
 
@@ -18,7 +18,9 @@ module "db" {
   db_ami_id = "${var.db_ami_id}"
   app_vpc = "${aws_vpc.app.id}"
   security_groups = "${module.app.security_group_id}"
-  subnet_cidr_block = "${module.app.subnet_cidr_block}"
+  subnet_cidr_blocks = "${module.app.subnet_cidr_blocks}"
+  key_name = "${aws_key_pair.default.key_name}"
+  internet_gateway = "${aws_internet_gateway.app.id}"
 }
 
 provider "aws" {
@@ -50,8 +52,9 @@ resource "aws_key_pair" "default" {
 
 # load the init template
 data "template_file" "app_init" {
+count = 3
 template = "${file("./scripts/app/init.sh.tpl")}"
 vars = {
-db_host="mongodb://${module.db.db_instance}:27017/posts"
+db_host="mongodb://${element(module.db.db_instance, count.index)}:27017/posts"
 }
 }
