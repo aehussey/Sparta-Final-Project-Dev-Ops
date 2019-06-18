@@ -7,7 +7,7 @@ DEPENDENCIES
     metadata: true
   node
     git: https://github.com/ARLeslie95/NginxReverseProxyCookbook.git
-    revision: 07c2c782895298264d1cb8e54193ed7af01faae6
+    revision: 3ec5b5f23e1fad7ea737ac06c6df67f5f05464d9
 
 GRAPH
   apt (7.1.1)
