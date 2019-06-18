@@ -54,6 +54,6 @@ resource "aws_key_pair" "default" {
 data "template_file" "app_init" {
 template = "${file("./scripts/app/init.sh.tpl")}"
 vars = {
-db_host="mongodb://10.17.1.0/24:27017/posts"
+db_host="mongodb://${module.db.db_instance}/24:27017/posts"
 }
 }

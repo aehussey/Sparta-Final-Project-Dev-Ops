@@ -159,9 +159,34 @@ resource "aws_autoscaling_group" "app" {
   min_size = 3
   max_size = 3
   vpc_zone_identifier = "${aws_subnet.app.*.id}"
+
+  load_balancers = ["${aws_elb.app.name}"]
+  health_check_type = "ELB"
+
   tag {
       key = "Name"
       value = "${var.name}"
       propagate_at_launch = true
+  }
+}
+
+resource "aws_elb" "app" {
+  name = "${var.name}"
+  security_groups = ["${aws_security_group.app.id}"]
+  subnets = "${aws_subnet.app.*.id}"
+
+  health_check {
+    healthy_threshold = 2
+    unhealthy_threshold = 2
+    timeout = 5
+    interval = 30
+    target = "HTTP:80/"
+  }
+
+  listener {
+    lb_port = 80
+    lb_protocol = "http"
+    instance_port = 80
+    instance_protocol = "http"
   }
 }

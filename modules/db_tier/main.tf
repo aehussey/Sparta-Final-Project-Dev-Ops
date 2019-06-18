@@ -122,25 +122,14 @@ resource "aws_route_table_association" "db" {
 }
 
 # launch an instance
-resource "aws_launch_configuration" "db" {
-  image_id           = "${var.db_ami_id}"
-  security_groups = ["${aws_security_group.db.id}"]
+resource "aws_instance" "db" {
+  count = 3
+  ami       = "${var.db_ami_id}"
+  subnet_id = "${aws_subnet.db[count.index].id}"
+  vpc_security_group_ids = ["${aws_security_group.db.id}"]
   instance_type = "t2.micro"
   key_name = "${var.key_name}"
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
-resource "aws_autoscaling_group" "db" {
-  launch_configuration = "${aws_launch_configuration.db.id}"
-  availability_zones = "${var.availability_zones.*}"
-  min_size = 3
-  max_size = 3
-  vpc_zone_identifier = "${aws_subnet.db.*.id}"
-  tag {
-      key = "Name"
-      value = "${var.name}"
-      propagate_at_launch = true
+  tags = {
+      Name = "${var.name}-db"
   }
 }
