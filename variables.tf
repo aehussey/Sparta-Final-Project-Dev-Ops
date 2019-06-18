@@ -1,5 +1,5 @@
 variable "name" {
-  default="app-aaron"
+  default="app-james"
 }
 
 variable "app_ami_id" {
@@ -11,5 +11,9 @@ variable "db_ami_id" {
 }
 
 variable "cidr_block" {
-  default="10.17.0.0/16"
+  default="10.98.0.0/16"
+}
+
+variable "zone_id" {
+  default="Z3CCIZELFLJ3SC"
 }
