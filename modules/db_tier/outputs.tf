@@ -1,3 +1,3 @@
 output "db_instance" {
-  value = "${aws_instance.db.*.private_ip}"
+  value = "${aws_instance.db.0.private_ip}"
 }

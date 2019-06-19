@@ -1,0 +1,2113 @@
+2019/06/17 15:26:08 [INFO] Terraform version: 0.12.1  
+2019/06/17 15:26:08 [INFO] Go runtime version: go1.12.4
+2019/06/17 15:26:08 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2019/06/17 15:26:08 [DEBUG] Attempting to open CLI config file: /Users/tech-a34/.terraformrc
+2019/06/17 15:26:08 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/06/17 15:26:08 [INFO] CLI command args: []string{"plan"}
+2019/06/17 15:26:08 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2019/06/17 15:26:08 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2019/06/17 15:26:08 [DEBUG] New state was assigned lineage "6d9ea1af-987e-3f77-f672-ebf56809ea7d"
+2019/06/17 15:26:08 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2019/06/17 15:26:08 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2019/06/17 15:26:08 [DEBUG] checking for provider in "."
+2019/06/17 15:26:08 [DEBUG] checking for provider in "/usr/local/bin"
+2019/06/17 15:26:08 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2019/06/17 15:26:08 [DEBUG] found provider "terraform-provider-aws_v2.14.0_x4"
+2019/06/17 15:26:08 [DEBUG] found provider "terraform-provider-template_v2.1.2_x4"
+2019/06/17 15:26:08 [DEBUG] found valid plugin: "aws", "2.14.0", "/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4"
+2019/06/17 15:26:08 [DEBUG] found valid plugin: "template", "2.1.2", "/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4"
+2019/06/17 15:26:08 [DEBUG] checking for provisioner in "."
+2019/06/17 15:26:08 [DEBUG] checking for provisioner in "/usr/local/bin"
+2019/06/17 15:26:08 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2019/06/17 15:26:08 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2019/06/17 15:26:08 [INFO] backend/local: starting Plan operation
+2019/06/17 15:26:08 [TRACE] backend/local: requesting state manager for workspace "default"
+2019/06/17 15:26:08 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2019/06/17 15:26:08 [TRACE] backend/local: requesting state lock for workspace "default"
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: existing snapshot has lineage "669d8462-d5ac-809c-796a-0958512d800b" serial 1642
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2019/06/17 15:26:08 [TRACE] backend/local: reading remote state for workspace "default"
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2019/06/17 15:26:08 [TRACE] statemgr.Filesystem: read snapshot with lineage "669d8462-d5ac-809c-796a-0958512d800b" serial 1642
+2019/06/17 15:26:08 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2019/06/17 15:26:08 [TRACE] backend/local: building context for current working directory
+2019/06/17 15:26:08 [TRACE] terraform.NewContext: starting
+2019/06/17 15:26:08 [TRACE] terraform.NewContext: resolving provider version selections
+2019/06/17 15:26:09 [TRACE] terraform.NewContext: loading provider schemas
+2019/06/17 15:26:09 [TRACE] LoadSchemas: retrieving schema for provider type "aws"
+2019-06-17T15:26:09.032+0100 [INFO]  plugin: configuring client automatic mTLS
+2019-06-17T15:26:09.067+0100 [DEBUG] plugin: starting plugin: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4 args=[/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4]
+2019-06-17T15:26:09.069+0100 [DEBUG] plugin: plugin started: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4 pid=49012
+2019-06-17T15:26:09.070+0100 [DEBUG] plugin: waiting for RPC address: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4
+2019-06-17T15:26:09.097+0100 [INFO]  plugin.terraform-provider-aws_v2.14.0_x4: configuring server automatic mTLS: timestamp=2019-06-17T15:26:09.096+0100
+2019-06-17T15:26:09.136+0100 [DEBUG] plugin: using plugin: version=5
+2019-06-17T15:26:09.136+0100 [DEBUG] plugin.terraform-provider-aws_v2.14.0_x4: plugin address: address=/var/folders/8f/l73wy7mj12s89455b7f73t_r0000gn/T/plugin210540835 network=unix timestamp=2019-06-17T15:26:09.136+0100
+2019/06/17 15:26:09 [TRACE] GRPCProvider: GetSchema
+2019/06/17 15:26:09 [TRACE] GRPCProvider: Close
+2019-06-17T15:26:09.286+0100 [DEBUG] plugin: plugin process exited: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4 pid=49012
+2019-06-17T15:26:09.286+0100 [DEBUG] plugin: plugin exited
+2019/06/17 15:26:09 [TRACE] LoadSchemas: retrieving schema for provider type "template"
+2019-06-17T15:26:09.286+0100 [INFO]  plugin: configuring client automatic mTLS
+2019-06-17T15:26:09.321+0100 [DEBUG] plugin: starting plugin: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4 args=[/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4]
+2019-06-17T15:26:09.325+0100 [DEBUG] plugin: plugin started: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4 pid=49013
+2019-06-17T15:26:09.325+0100 [DEBUG] plugin: waiting for RPC address: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4
+2019-06-17T15:26:09.336+0100 [INFO]  plugin.terraform-provider-template_v2.1.2_x4: configuring server automatic mTLS: timestamp=2019-06-17T15:26:09.335+0100
+2019-06-17T15:26:09.373+0100 [DEBUG] plugin.terraform-provider-template_v2.1.2_x4: plugin address: address=/var/folders/8f/l73wy7mj12s89455b7f73t_r0000gn/T/plugin386883912 network=unix timestamp=2019-06-17T15:26:09.373+0100
+2019-06-17T15:26:09.373+0100 [DEBUG] plugin: using plugin: version=5
+2019/06/17 15:26:09 [TRACE] GRPCProvider: GetSchema
+2019/06/17 15:26:09 [TRACE] GRPCProvider: Close
+2019-06-17T15:26:09.461+0100 [DEBUG] plugin: plugin process exited: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4 pid=49013
+2019-06-17T15:26:09.461+0100 [DEBUG] plugin: plugin exited
+2019/06/17 15:26:09 [TRACE] terraform.NewContext: complete
+2019/06/17 15:26:09 [TRACE] backend/local: finished building terraform.Context
+2019/06/17 15:26:09 [TRACE] backend/local: requesting interactive input, if necessary
+2019/06/17 15:26:09 [TRACE] Context.Input: Prompting for variables
+2019/06/17 15:26:09 [TRACE] Context.Input: Prompting for provider arguments
+2019/06/17 15:26:09 [TRACE] Context.Input: Provider provider.aws declared at main.tf:26,1-15
+2019/06/17 15:26:09 [TRACE] Context.Input: Provider provider.template implied by data block at main.tf:54,1-32
+2019/06/17 15:26:09 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2019/06/17 15:26:09 [TRACE] Context.Input: Input for provider.template: map[string]cty.Value{}
+2019/06/17 15:26:09 [TRACE] backend/local: running validation operation
+2019/06/17 15:26:09 [INFO] terraform: building graph: GraphTypeValidate
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/06/17 15:26:09 [TRACE] ConfigTransformer: Starting for path: 
+2019/06/17 15:26:09 [TRACE] ConfigTransformer: Starting for path: app
+2019/06/17 15:26:09 [TRACE] ConfigTransformer: Starting for path: db
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/06/17 15:26:09 [TRACE] OrphanResourceInstanceTransformer: adding single-instance orphan node for module.db.aws_instance.db[1]
+2019/06/17 15:26:09 [TRACE] OrphanResourceInstanceTransformer: adding single-instance orphan node for module.db.aws_instance.db[2]
+2019/06/17 15:26:09 [TRACE] OrphanResourceInstanceTransformer: adding single-instance orphan node for module.db.aws_instance.db[0]
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/06/17 15:26:09 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_network_acl.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:57,1-33
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_autoscaling_group.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:156,1-39
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.app" (*terraform.NodeValidatableResource) config from main.tf:31,1-25
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_security_group.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:15,1-36
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_route_table.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:105,1-32
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_launch_configuration.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:125,1-41
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_autoscaling_group.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:135,1-38
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "aws_internet_gateway.app" (*terraform.NodeValidatableResource) config from main.tf:40,1-38
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_launch_configuration.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:145,1-42
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_subnet.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:3,1-28
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_route_table.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:125,1-33
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.app.aws_route_table_association.app" (*terraform.NodeValidatableResource) config from modules/app_tier/main.tf:138,1-45
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_subnet.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:3,1-27
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_network_acl.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:55,1-32
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "aws_key_pair.default" (*terraform.NodeValidatableResource) config from main.tf:48,1-34
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_route_table_association.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:118,1-44
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.aws_security_group.db" (*terraform.NodeValidatableResource) config from modules/db_tier/main.tf:15,1-35
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "module.db.data.aws_instance.db" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"modules/db_tier/main.tf", Start:hcl.Pos{Line:148, Column:1, Byte:2921}, End:hcl.Pos{Line:148, Column:25, Byte:2945}}
+2019/06/17 15:26:09 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.app_init" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:54, Column:1, Byte:1234}, End:hcl.Pos{Line:54, Column:32, Byte:1265}}
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/06/17 15:26:09 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from main.tf:26,1-15
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/06/17 15:26:09 [DEBUG] adding implicit provider configuration provider.template, implied first by data.template_file.app_init
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+aws_vpc.app - *terraform.NodeValidatableResource
+data.template_file.app_init - *terraform.NodeValidatableResource
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_autoscaling_group.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_autoscaling_group.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_instance.db[1] is provided by provider.aws exactly
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_instance.db[2] is provided by provider.aws exactly
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: aws_vpc.app is provided by provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_security_group.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_launch_configuration.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_subnet.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_route_table.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_subnet.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_network_acl.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: aws_internet_gateway.app is provided by provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_route_table.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_network_acl.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: aws_key_pair.default is provided by provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_launch_configuration.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_route_table_association.app is provided by module.app.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.data.aws_instance.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_instance.db[0] is provided by provider.aws exactly
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: data.template_file.app_init is provided by provider.template or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_route_table_association.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_security_group.db is provided by module.db.provider.aws or inherited equivalent
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_autoscaling_group.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_autoscaling_group.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_subnet.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_subnet.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_internet_gateway.app
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "aws_internet_gateway.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_network_acl.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_network_acl.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_key_pair.default
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "aws_key_pair.default" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_route_table_association.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_route_table_association.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.template serving data.template_file.app_init
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "data.template_file.app_init" (*terraform.NodeValidatableResource) needs provider.template
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_autoscaling_group.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_autoscaling_group.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_security_group.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_security_group.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_route_table.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_route_table.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_subnet.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_subnet.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_route_table_association.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_route_table_association.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving module.db.aws_instance.db[1]
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_instance.db[1]" (*terraform.NodeAbstractResourceInstance) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_vpc.app
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "aws_vpc.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_launch_configuration.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_launch_configuration.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.data.aws_instance.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.data.aws_instance.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving module.db.aws_instance.db[0]
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_instance.db[0]" (*terraform.NodeAbstractResourceInstance) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_security_group.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_security_group.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: exact match for provider.aws serving module.db.aws_instance.db[2]
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_instance.db[2]" (*terraform.NodeAbstractResourceInstance) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.app.aws_network_acl.app uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.app.aws_network_acl.app" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_route_table.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_route_table.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] ProviderTransformer: module.db.aws_launch_configuration.db uses inherited configuration provider.aws
+2019/06/17 15:26:09 [DEBUG] ProviderTransformer: "module.db.aws_launch_configuration.db" (*terraform.NodeValidatableResource) needs provider.aws
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.template_file.app_init - *terraform.NodeValidatableResource
+  provider.template - *terraform.NodeApplyableProvider
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/06/17 15:26:09 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.template_file.app_init - *terraform.NodeValidatableResource
+  provider.template - *terraform.NodeApplyableProvider
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_subnet.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_route_table.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_subnet.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_network_acl.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.aws
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_internet_gateway.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_route_table.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.template
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_key_pair.default
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_launch_configuration.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_route_table_association.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_network_acl.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.app_init
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_route_table_association.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_security_group.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.data.aws_instance.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_instance.db[0]
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_autoscaling_group.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_instance.db[2]
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.app.aws_security_group.app
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_launch_configuration.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_autoscaling_group.db
+2019/06/17 15:26:09 [TRACE] AttachSchemaTransformer: attaching resource schema to module.db.aws_instance.db[1]
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/06/17 15:26:09 [ERROR] Can't parse hcl.Traversal{hcl.TraverseRoot{isTraverser:hcl.isTraverser{}, Name:"aws_autoscaling_group", SrcRange:hcl.Range{Filename:"modules/db_tier/main.tf", Start:hcl.Pos{Line:150, Column:18, Byte:2997}, End:hcl.Pos{Line:150, Column:39, Byte:3018}}}} from depends_on as reference: [{%!s(*hcl.Diagnostic=&{1 Invalid reference A reference to a resource type must be followed by at least one attribute access, specifying the resource name. 0xc000bb6c00 <nil> <nil> <nil>})}]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.cidr_block" references: [var.cidr_block]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "aws_internet_gateway.app" references: [var.name aws_vpc.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_route_table.db" references: [module.db.var.name module.db.var.app_vpc module.db.var.internet_gateway]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.output.db_instance" references: [module.db.aws_instance.db[0] module.db.aws_instance.db[1] module.db.aws_instance.db[2]]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_network_acl.db" references: [module.db.aws_subnet.db module.db.var.name module.db.var.app_vpc]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.output.security_group_id" references: [module.app.aws_security_group.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.app_vpc" references: [aws_vpc.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "provider.template" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "aws_key_pair.default" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_launch_configuration.app" references: [module.app.var.template_file module.app.var.app_ami_id module.app.aws_security_group.app module.app.var.key_name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_route_table_association.app" references: [module.app.aws_route_table.app module.app.aws_subnet.app]
+2019/06/17 15:26:09 [ERROR] Can't parse hcl.Traversal{hcl.TraverseRoot{isTraverser:hcl.isTraverser{}, Name:"aws_autoscaling_group", SrcRange:hcl.Range{Filename:"modules/db_tier/main.tf", Start:hcl.Pos{Line:150, Column:18, Byte:2997}, End:hcl.Pos{Line:150, Column:39, Byte:3018}}}} from depends_on as reference: [{%!s(*hcl.Diagnostic=&{1 Invalid reference A reference to a resource type must be followed by at least one attribute access, specifying the resource name. 0xc0007e4880 <nil> <nil> <nil>})}]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.data.aws_instance.db" references: [module.db.var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_instance.db[0]" references: [module.db.aws_security_group.db module.db.aws_subnet.db]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "var.app_ami_id" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.db_ami_id" references: [var.db_ami_id]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.key_name" references: [aws_key_pair.default]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "data.template_file.app_init" references: [module.db.output.db_instance]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_route_table_association.db" references: [module.db.aws_subnet.db module.db.aws_route_table.db]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_security_group.db" references: [module.db.var.app_vpc module.db.var.name module.db.var.name module.db.var.name module.db.var.security_groups]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.availability_zones" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.subnet_cidr_blocks" references: [module.app.output.subnet_cidr_blocks]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_autoscaling_group.app" references: [module.app.aws_launch_configuration.app module.app.var.availability_zones module.app.aws_subnet.app module.app.var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.internet_gateway" references: [aws_internet_gateway.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.subnets" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_autoscaling_group.db" references: [module.db.aws_subnet.db module.db.aws_launch_configuration.db module.db.var.availability_zones module.db.var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_instance.db[1]" references: [module.db.aws_security_group.db module.db.aws_subnet.db]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_instance.db[2]" references: [module.db.aws_security_group.db module.db.aws_subnet.db]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.name" references: [var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.security_groups" references: [module.app.output.security_group_id]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "aws_vpc.app" references: [var.name var.cidr_block]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_security_group.app" references: [module.app.var.app_vpc module.app.var.name module.app.var.name module.app.var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_launch_configuration.db" references: [module.db.var.key_name module.db.var.db_ami_id module.db.aws_security_group.db]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.key_name" references: [aws_key_pair.default]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.app_vpc" references: [aws_vpc.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.output.subnet_cidr_blocks" references: [module.app.aws_subnet.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "var.db_ami_id" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.availability_zones" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.subnets" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.db_ami_id" references: [var.db_ami_id]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_subnet.app" references: [module.app.var.name module.app.var.subnets module.app.var.app_vpc module.app.var.availability_zones]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_route_table.app" references: [module.app.var.name module.app.var.app_vpc module.app.var.internet_gateway]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.aws_subnet.db" references: [module.db.var.subnets module.db.var.app_vpc module.db.var.name module.db.var.availability_zones]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.internet_gateway" references: [aws_internet_gateway.app]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.db.var.app_ami_id" references: [var.app_ami_id]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "var.cidr_block" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.app_ami_id" references: [var.app_ami_id]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.cidr_block" references: [var.cidr_block]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.template_file" references: [data.template_file.app_init]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "provider.aws" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.aws_network_acl.app" references: [module.app.var.app_vpc module.app.aws_subnet.app module.app.var.name]
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "var.name" references: []
+2019/06/17 15:26:09 [DEBUG] ReferenceTransformer: "module.app.var.name" references: [var.name]
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.cidr_block - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+data.template_file.app_init - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  provider.template - *terraform.NodeApplyableProvider
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  data.template_file.app_init - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.cidr_block - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+data.template_file.app_init - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  provider.template - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_key_pair.default - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  data.template_file.app_init - *terraform.NodeValidatableResource
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.template - *terraform.NodeApplyableProvider
+  var.app_ami_id - *terraform.NodeRootVariable
+  var.cidr_block - *terraform.NodeRootVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  data.template_file.app_init - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.cidr_block - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+data.template_file.app_init - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  provider.template - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_key_pair.default - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  data.template_file.app_init - *terraform.NodeValidatableResource
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.template - *terraform.NodeApplyableProvider
+  var.app_ami_id - *terraform.NodeRootVariable
+  var.cidr_block - *terraform.NodeRootVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  data.template_file.app_init - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_key_pair.default - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+provider.template (close) - *terraform.graphNodeCloseProvider
+  data.template_file.app_init - *terraform.NodeValidatableResource
+  provider.template - *terraform.NodeApplyableProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.cidr_block - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+data.template_file.app_init - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  provider.template - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_key_pair.default - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  data.template_file.app_init - *terraform.NodeValidatableResource
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.template - *terraform.NodeApplyableProvider
+  var.app_ami_id - *terraform.NodeRootVariable
+  var.cidr_block - *terraform.NodeRootVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  data.template_file.app_init - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_key_pair.default - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.template - *terraform.NodeApplyableProvider
+provider.template (close) - *terraform.graphNodeCloseProvider
+  data.template_file.app_init - *terraform.NodeValidatableResource
+  provider.template - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+  provider.template (close) - *terraform.graphNodeCloseProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/06/17 15:26:09 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+aws_internet_gateway.app - *terraform.NodeValidatableResource
+  aws_vpc.app - *terraform.NodeValidatableResource
+aws_key_pair.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_vpc.app - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.cidr_block - *terraform.NodeRootVariable
+  var.name - *terraform.NodeRootVariable
+data.template_file.app_init - *terraform.NodeValidatableResource
+  module.db.output.db_instance - *terraform.NodeApplyableOutput
+  provider.template - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.aws_launch_configuration.app - *terraform.NodeValidatableResource
+  module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table.app - *terraform.NodeValidatableResource
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.aws_security_group.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+module.app.aws_subnet.app - *terraform.NodeValidatableResource
+  module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.app.var.name - *terraform.NodeApplyableModuleVariable
+  module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.output.security_group_id - *terraform.NodeApplyableOutput
+  module.app.aws_security_group.app - *terraform.NodeValidatableResource
+module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+  module.app.aws_subnet.app - *terraform.NodeValidatableResource
+module.app.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.app.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.app.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.app.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.app.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.app.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.app.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.app.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.app.var.subnets - *terraform.NodeApplyableModuleVariable
+module.app.var.template_file - *terraform.NodeApplyableModuleVariable
+  data.template_file.app_init - *terraform.NodeValidatableResource
+module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_launch_configuration.db - *terraform.NodeValidatableResource
+  module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table.db - *terraform.NodeValidatableResource
+  module.db.aws_subnet.db - *terraform.NodeValidatableResource
+module.db.aws_security_group.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+module.db.aws_subnet.db - *terraform.NodeValidatableResource
+  module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+  module.db.var.name - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.db.output.db_instance - *terraform.NodeApplyableOutput
+  module.db.aws_instance.db[0] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[1] - *terraform.NodeAbstractResourceInstance
+  module.db.aws_instance.db[2] - *terraform.NodeAbstractResourceInstance
+module.db.var.app_ami_id - *terraform.NodeApplyableModuleVariable
+  var.app_ami_id - *terraform.NodeRootVariable
+module.db.var.app_vpc - *terraform.NodeApplyableModuleVariable
+  aws_vpc.app - *terraform.NodeValidatableResource
+module.db.var.availability_zones - *terraform.NodeApplyableModuleVariable
+module.db.var.cidr_block - *terraform.NodeApplyableModuleVariable
+  var.cidr_block - *terraform.NodeRootVariable
+module.db.var.db_ami_id - *terraform.NodeApplyableModuleVariable
+  var.db_ami_id - *terraform.NodeRootVariable
+module.db.var.internet_gateway - *terraform.NodeApplyableModuleVariable
+  aws_internet_gateway.app - *terraform.NodeValidatableResource
+module.db.var.key_name - *terraform.NodeApplyableModuleVariable
+  aws_key_pair.default - *terraform.NodeValidatableResource
+module.db.var.name - *terraform.NodeApplyableModuleVariable
+  var.name - *terraform.NodeRootVariable
+module.db.var.security_groups - *terraform.NodeApplyableModuleVariable
+  module.app.output.security_group_id - *terraform.NodeApplyableOutput
+module.db.var.subnet_cidr_blocks - *terraform.NodeApplyableModuleVariable
+  module.app.output.subnet_cidr_blocks - *terraform.NodeApplyableOutput
+module.db.var.subnets - *terraform.NodeApplyableModuleVariable
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  module.app.aws_autoscaling_group.app - *terraform.NodeValidatableResource
+  module.app.aws_network_acl.app - *terraform.NodeValidatableResource
+  module.app.aws_route_table_association.app - *terraform.NodeValidatableResource
+  module.db.aws_autoscaling_group.db - *terraform.NodeValidatableResource
+  module.db.aws_network_acl.db - *terraform.NodeValidatableResource
+  module.db.aws_route_table_association.db - *terraform.NodeValidatableResource
+  module.db.data.aws_instance.db - *terraform.NodeValidatableResource
+provider.template - *terraform.NodeApplyableProvider
+provider.template (close) - *terraform.graphNodeCloseProvider
+  data.template_file.app_init - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+  provider.template (close) - *terraform.graphNodeCloseProvider
+var.app_ami_id - *terraform.NodeRootVariable
+var.cidr_block - *terraform.NodeRootVariable
+var.db_ami_id - *terraform.NodeRootVariable
+var.name - *terraform.NodeRootVariable
+------
+2019/06/17 15:26:09 [DEBUG] Starting graph walk: walkValidate
+2019/06/17 15:26:09 [TRACE] dag/walk: updating graph
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_instance.db[2]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_route_table.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.key_name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "data.template_file.app_init"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_security_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_launch_configuration.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.internet_gateway"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.subnets"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_autoscaling_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.subnets"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_route_table.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_route_table_association.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.security_groups"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_route_table_association.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.output.subnet_cidr_blocks"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.internet_gateway"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "aws_internet_gateway.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_launch_configuration.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_security_group.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.data.aws_instance.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.output.db_instance"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "root"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "aws_vpc.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_network_acl.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "provider.template (close)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.template_file"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_network_acl.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "aws_key_pair.default"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_subnet.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.output.security_group_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "provider.aws"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "provider.template"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_instance.db[0]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.aws_instance.db[1]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.var.key_name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.subnet_cidr_blocks"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.db.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added new vertex: "module.app.aws_autoscaling_group.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.data.aws_instance.db" waiting on "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_route_table_association.app" waiting on "module.app.aws_route_table.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "aws_vpc.app" waiting on "var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_route_table_association.app" waiting on "module.app.aws_subnet.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_launch_configuration.app" waiting on "module.app.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.var.subnet_cidr_blocks"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.subnet_cidr_blocks" waiting on "module.app.output.subnet_cidr_blocks"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.key_name" waiting on "aws_key_pair.default"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "root" waiting on "provider.template (close)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.internet_gateway" waiting on "aws_internet_gateway.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.template_file" waiting on "data.template_file.app_init"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.app.aws_autoscaling_group.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[2]" waiting on "module.db.aws_security_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[1]" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_route_table.app" waiting on "module.app.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_subnet.app" waiting on "module.app.var.subnets"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.template (close)" waiting on "data.template_file.app_init"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_autoscaling_group.db" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "aws_internet_gateway.app" waiting on "aws_vpc.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.app.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.app.aws_route_table_association.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_security_group.app" waiting on "module.app.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_launch_configuration.db" waiting on "module.db.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_launch_configuration.db" waiting on "module.db.var.key_name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_security_group.db" waiting on "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.app.aws_autoscaling_group.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.aws_autoscaling_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_network_acl.db" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.security_groups" waiting on "module.app.output.security_group_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_route_table.db" waiting on "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "data.template_file.app_init" waiting on "provider.template"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.app_vpc" waiting on "aws_vpc.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_route_table_association.db" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_subnet.app" waiting on "module.app.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.output.db_instance" waiting on "module.db.aws_instance.db[1]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.db.aws_autoscaling_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.db.data.aws_instance.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_security_group.db" waiting on "module.db.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_launch_configuration.app" waiting on "module.app.var.key_name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "aws_vpc.app" waiting on "provider.aws"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.cidr_block" waiting on "var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_autoscaling_group.app" waiting on "module.app.aws_launch_configuration.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_network_acl.app" waiting on "module.app.aws_subnet.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_subnet.app" waiting on "module.app.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "data.template_file.app_init" waiting on "module.db.output.db_instance"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.data.aws_instance.db" waiting on "provider.aws"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_subnet.db" waiting on "module.db.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.db.aws_route_table_association.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_security_group.db" waiting on "module.db.var.security_groups"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_subnet.db" waiting on "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_autoscaling_group.db" waiting on "module.db.aws_launch_configuration.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_route_table.db" waiting on "module.db.var.internet_gateway"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.aws_network_acl.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_subnet.db" waiting on "module.db.var.subnets"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "aws_key_pair.default" waiting on "provider.aws"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.app.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.app_ami_id" waiting on "var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_launch_configuration.db" waiting on "module.db.aws_security_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[2]" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.db.aws_network_acl.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.db_ami_id" waiting on "var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.output.subnet_cidr_blocks" waiting on "module.app.aws_subnet.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.app_ami_id" waiting on "var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[0]" waiting on "module.db.aws_subnet.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.app.aws_network_acl.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_route_table_association.db" waiting on "module.db.aws_route_table.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_autoscaling_group.app" waiting on "module.app.aws_subnet.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.db_ami_id" waiting on "var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.internet_gateway" waiting on "aws_internet_gateway.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.name" waiting on "var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.app.aws_route_table_association.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "aws_vpc.app" waiting on "var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_route_table.app" waiting on "module.app.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.output.db_instance" waiting on "module.db.aws_instance.db[2]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.key_name" waiting on "aws_key_pair.default"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[0]" waiting on "module.db.aws_security_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_subnet.db" waiting on "module.db.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.app.aws_network_acl.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.output.db_instance" waiting on "module.db.aws_instance.db[0]"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_security_group.app" waiting on "module.app.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_launch_configuration.app" waiting on "module.app.var.template_file"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_subnet.app" waiting on "module.app.var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.data.aws_instance.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.db.aws_route_table_association.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.output.security_group_id" waiting on "module.app.aws_security_group.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_route_table.db" waiting on "module.db.var.app_vpc"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.aws_instance.db[1]" waiting on "module.db.aws_security_group.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.aws_route_table.app" waiting on "module.app.var.internet_gateway"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.app.var.cidr_block" waiting on "var.cidr_block"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.name" waiting on "var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/06/17 15:26:09 [TRACE] dag/walk: added edge: "module.db.var.app_vpc" waiting on "aws_vpc.app"
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.app_vpc", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.data.aws_instance.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.internet_gateway", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_instance.db[1]", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.security_groups", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.key_name", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.output.security_group_id", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.cidr_block", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_route_table_association.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_route_table.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_route_table_association.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.internet_gateway", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.name", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_launch_configuration.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "provider.template (close)", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.cidr_block", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.app_ami_id", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.db_ami_id", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.db_ami_id", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_instance.db[0]", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.name", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "aws_vpc.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_launch_configuration.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_security_group.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_network_acl.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_subnet.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.app_vpc", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.key_name", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_subnet.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "data.template_file.app_init", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "aws_key_pair.default", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_instance.db[2]", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_network_acl.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_autoscaling_group.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.output.subnet_cidr_blocks", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.app_ami_id", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.var.subnet_cidr_blocks", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.var.template_file", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_autoscaling_group.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.app.aws_security_group.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.output.db_instance", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "aws_internet_gateway.app", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: dependencies changed for "module.db.aws_route_table.db", sending new deps
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "var.name"
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "provider.template"
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.subnets"
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.subnets": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "var.name": starting visit (*terraform.NodeRootVariable)
+2019/06/17 15:26:09 [TRACE] vertex "var.name": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.name"
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.name": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.subnets": evaluating
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.name": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.name
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.subnets
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] vertex "provider.template": starting visit (*terraform.NodeApplyableProvider)
+2019/06/17 15:26:09 [TRACE] vertex "provider.template": evaluating
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.subnets
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: provider.template
+2019/06/17 15:26:09 [TRACE] vertex "var.db_ami_id": starting visit (*terraform.NodeRootVariable)
+2019/06/17 15:26:09 [TRACE] vertex "var.db_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.subnets": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.availability_zones": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.db_ami_id": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.availability_zones": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.availability_zones
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "var.cidr_block"
+2019/06/17 15:26:09 [TRACE] vertex "var.cidr_block": starting visit (*terraform.NodeRootVariable)
+2019/06/17 15:26:09 [TRACE] vertex "var.cidr_block": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.availability_zones"
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.availability_zones": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.cidr_block": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.cidr_block": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.cidr_block
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.availability_zones": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.availability_zones
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.subnets"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.subnets": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.subnets": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.subnets
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.name"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.name": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.name": evaluating
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.subnets
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.name
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.name": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.db_ami_id"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.db_ami_id": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.db_ami_id": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.db_ami_id
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.availability_zones
+2019-06-17T15:26:09.486+0100 [INFO]  plugin: configuring client automatic mTLS
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.availability_zones": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.cidr_block"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.cidr_block": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "provider.aws"
+2019/06/17 15:26:09 [TRACE] vertex "provider.aws": starting visit (*terraform.NodeApplyableProvider)
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] vertex "provider.aws": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: provider.aws
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.availability_zones
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.availability_zones": visit complete
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.name
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.cidr_block
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.name
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.db_ami_id": evaluating
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.name": visit complete
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.db_ami_id
+2019/06/17 15:26:09 [TRACE] vertex "var.app_ami_id": starting visit (*terraform.NodeRootVariable)
+2019/06/17 15:26:09 [TRACE] vertex "var.app_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.db_ami_id
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.db_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.db_ami_id
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.db_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.cidr_block": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.cidr_block
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.subnets": visit complete
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.cidr_block": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.app.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.app_ami_id": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.app_ami_id": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.app.var.app_ami_id
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.var.app_ami_id"
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.app_ami_id
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.app_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.app_ami_id": starting visit (*terraform.NodeApplyableModuleVariable)
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.app_ami_id": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.var.app_ami_id
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.db.var.app_ami_id
+2019/06/17 15:26:09 [TRACE] vertex "module.db.var.app_ami_id": visit complete
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: module.app.var.cidr_block
+2019/06/17 15:26:09 [TRACE] vertex "module.app.var.cidr_block": visit complete
+2019-06-17T15:26:09.523+0100 [DEBUG] plugin: starting plugin: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4 args=[/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4]
+2019-06-17T15:26:09.526+0100 [DEBUG] plugin: plugin started: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4 pid=49014
+2019-06-17T15:26:09.526+0100 [DEBUG] plugin: waiting for RPC address: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-template_v2.1.2_x4
+2019-06-17T15:26:09.538+0100 [INFO]  plugin.terraform-provider-template_v2.1.2_x4: configuring server automatic mTLS: timestamp=2019-06-17T15:26:09.537+0100
+2019-06-17T15:26:09.575+0100 [DEBUG] plugin: using plugin: version=5
+2019-06-17T15:26:09.576+0100 [DEBUG] plugin.terraform-provider-template_v2.1.2_x4: plugin address: address=/var/folders/8f/l73wy7mj12s89455b7f73t_r0000gn/T/plugin904694293 network=unix timestamp=2019-06-17T15:26:09.575+0100
+2019/06/17 15:26:09 [TRACE] BuiltinEvalContext: Initialized "template" provider for provider.template
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019-06-17T15:26:09.576+0100 [INFO]  plugin: configuring client automatic mTLS
+2019-06-17T15:26:09.621+0100 [DEBUG] plugin: starting plugin: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4 args=[/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4]
+2019-06-17T15:26:09.625+0100 [DEBUG] plugin: plugin started: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4 pid=49015
+2019-06-17T15:26:09.625+0100 [DEBUG] plugin: waiting for RPC address: path=/Users/tech-a34/Documents/Engineering29/DevOps/week11/Sparta-Final-Project-Dev-Ops/.terraform/plugins/darwin_amd64/terraform-provider-aws_v2.14.0_x4
+2019-06-17T15:26:09.655+0100 [INFO]  plugin.terraform-provider-aws_v2.14.0_x4: configuring server automatic mTLS: timestamp=2019-06-17T15:26:09.655+0100
+2019-06-17T15:26:09.695+0100 [DEBUG] plugin: using plugin: version=5
+2019-06-17T15:26:09.695+0100 [DEBUG] plugin.terraform-provider-aws_v2.14.0_x4: plugin address: address=/var/folders/8f/l73wy7mj12s89455b7f73t_r0000gn/T/plugin202720050 network=unix timestamp=2019-06-17T15:26:09.695+0100
+2019/06/17 15:26:09 [TRACE] BuiltinEvalContext: Initialized "aws" provider for provider.aws
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2019/06/17 15:26:09 [TRACE] buildProviderConfig for provider.template: no configuration at all
+2019/06/17 15:26:09 [TRACE] GRPCProvider: GetSchema
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2019/06/17 15:26:09 [TRACE] buildProviderConfig for provider.aws: using explicit config only
+2019/06/17 15:26:09 [TRACE] GRPCProvider: GetSchema
+2019/06/17 15:26:09 [TRACE] GRPCProvider: PrepareProviderConfig
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: provider.template
+2019/06/17 15:26:09 [TRACE] vertex "provider.template": visit complete
+2019/06/17 15:26:09 [TRACE] GRPCProvider: PrepareProviderConfig
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] <root>: eval: terraform.EvalNoop
+2019/06/17 15:26:09 [TRACE] [walkValidate] Exiting eval tree: provider.aws
+2019/06/17 15:26:09 [TRACE] vertex "provider.aws": visit complete
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "module.db.data.aws_instance.db"
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "aws_vpc.app"
+2019/06/17 15:26:09 [TRACE] vertex "aws_vpc.app": starting visit (*terraform.NodeValidatableResource)
+2019/06/17 15:26:09 [TRACE] vertex "aws_vpc.app": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: aws_vpc.app
+2019/06/17 15:26:09 [TRACE] vertex "module.db.data.aws_instance.db": starting visit (*terraform.NodeValidatableResource)
+2019/06/17 15:26:09 [TRACE] vertex "module.db.data.aws_instance.db": evaluating
+2019/06/17 15:26:09 [TRACE] dag/walk: visiting "aws_key_pair.default"
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: module.db.data.aws_instance.db
+2019/06/17 15:26:09 [TRACE] module.db: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] vertex "aws_key_pair.default": starting visit (*terraform.NodeValidatableResource)
+2019/06/17 15:26:09 [TRACE] vertex "aws_key_pair.default": evaluating
+2019/06/17 15:26:09 [TRACE] [walkValidate] Entering eval tree: aws_key_pair.default
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2019/06/17 15:26:09 [TRACE] module.db: eval: *terraform.EvalGetProvider
+2019/06/17 15:26:09 [TRACE] module.db: eval: *terraform.EvalValidateResource
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/06/17 15:26:09 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2019/06/17 15:26:09 [TRACE] vertex "module.db.data.aws_instance.db": visit complete
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x58 pc=0x1a91756]
+
+goroutine 165 [running]:
+github.com/hashicorp/terraform/terraform.(*EvalValidateResource).Eval(0xc0001e2140, 0x2c171e0, 0xc0010b4820, 0x2, 0x2, 0x0, 0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/eval_validate.go:376 +0x246
+github.com/hashicorp/terraform/terraform.EvalRaw(0x2baf060, 0xc0001e2140, 0x2c171e0, 0xc0010b4820, 0x0, 0x0, 0x0, 0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/eval.go:57 +0x131
+github.com/hashicorp/terraform/terraform.(*EvalSequence).Eval(0xc000688040, 0x2c171e0, 0xc0010b4820, 0x2, 0x2, 0x1a8b805, 0x2baf060)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/eval_sequence.go:20 +0xfd
+github.com/hashicorp/terraform/terraform.EvalRaw(0x2baefc0, 0xc000688040, 0x2c171e0, 0xc0010b4820, 0x24e05c0, 0x3a242c5, 0x2455680, 0xc0001fa290)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/eval.go:57 +0x131
+github.com/hashicorp/terraform/terraform.Eval(0x2baefc0, 0xc000688040, 0x2c171e0, 0xc0010b4820, 0xc000688040, 0x2baefc0, 0xc000688040, 0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/eval.go:35 +0x4d
+github.com/hashicorp/terraform/terraform.(*Graph).walk.func1(0x270ed60, 0xc0004a2530, 0x0, 0x0, 0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/terraform/graph.go:90 +0xf40
+github.com/hashicorp/terraform/dag.(*Walker).walkVertex(0xc0002aed00, 0x270ed60, 0xc0004a2530, 0xc0007c0a00)
+	/opt/gopath/src/github.com/hashicorp/terraform/dag/walk.go:392 +0x353
+created by github.com/hashicorp/terraform/dag.(*Walker).Update
+	/opt/gopath/src/github.com/hashicorp/terraform/dag/walk.go:314 +0xa9b
