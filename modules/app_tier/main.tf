@@ -194,8 +194,61 @@ resource "aws_elb" "app" {
   }
 }
 
+# route 53 a record
 locals {
+  domain_name = "spartaglobal.education."
+  record_name = "${var.name}.local"
   asg_tags = {
     Name = "${var.name}"
   }
+}
+
+data "aws_route53_zone" "hosted_zone" {
+  name = "${local.domain_name}"
+}
+
+resource "aws_route53_record" "www" {
+  zone_id = "${data.aws_route53_zone.hosted_zone.zone_id}"
+  name    = "${var.name}.A-record"
+  type    = "A"
+
+    alias {
+    name                   = "${aws_elb.app.dns_name}"
+    zone_id                = "${aws_elb.app.zone_id}"
+    evaluate_target_health = true
+  }
+}
+
+resource "aws_route53_record" "dns_record_cname" {
+  zone_id = "${data.aws_route53_zone.hosted_zone.zone_id}"
+  name    = "${local.record_name}-cname"
+  type    = "CNAME"
+  ttl     = "5"
+
+  weighted_routing_policy {
+    weight = 100
+  }
+
+  set_identifier = "live"
+  records        = ["${aws_route53_record.www.name}.${local.domain_name}"]
+}
+
+
+resource "aws_route53_record" "dns_record_cname_live" {
+  zone_id = "${data.aws_route53_zone.hosted_zone.zone_id}"
+  name    = "${var.name}"
+  type    = "CNAME"
+
+  weighted_routing_policy {
+    weight = 100
+  }
+
+  alias {
+  name                   = "${local.record_name}-cname.${local.domain_name}"
+  zone_id                = "${data.aws_route53_zone.hosted_zone.zone_id}"
+  evaluate_target_health = true
+}
+
+  set_identifier = "live"
+
 }

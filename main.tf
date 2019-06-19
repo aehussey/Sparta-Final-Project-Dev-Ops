@@ -27,9 +27,12 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
+
 # create a vpc
 resource "aws_vpc" "app" {
   cidr_block = "${var.cidr_block}"
+  enable_dns_hostnames = true
+  enable_dns_support   = true
 
   tags = {
     Name = "${var.name}"
@@ -47,10 +50,10 @@ resource "aws_internet_gateway" "app" {
 
 # load the init template
 data "template_file" "app_init" {
-template = "${file("./scripts/app/init.sh.tpl")}"
-vars = {
-db_host="mongodb://${module.db.db_instance}/24:27017/posts"
-}
+  template = "${file("./scripts/app/init.sh.tpl")}"
+  vars = {
+  db_host="mongodb://${module.db.db_instance}/24:27017/posts"
+  }
 }
 
 resource "aws_key_pair" "key" {
