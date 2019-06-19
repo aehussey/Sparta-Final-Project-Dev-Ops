@@ -30,7 +30,7 @@ module "elk_stack" {
   cidr_block = "${var.cidr_block}"
   db_ami_id = "${var.db_ami_id}"
   app_vpc = "${aws_vpc.app.id}"
-  key_name = "${aws_key_pair.default.key_name}"
+  key_name = "${aws_key_pair.key.key_name}"
   internet_gateway = "${aws_internet_gateway.app.id}"
 }
 

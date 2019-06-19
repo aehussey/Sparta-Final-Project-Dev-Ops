@@ -24,7 +24,7 @@ variable "internet_gateway" {
 }
 
 variable "subnet" {
-  default = "10.18.31.0/24"
+  default = "10.17.31.0/24"
 }
 
 variable "key_name" {

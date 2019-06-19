@@ -60,7 +60,7 @@ resource "aws_network_acl" "db" {
     protocol   = "tcp"
     rule_no    = 100
     action     = "allow"
-    cidr_block = "10.18.0.0/16"
+    cidr_block = "10.17.0.0/16"
     from_port  = 27017
     to_port    = 27017
   }
@@ -71,7 +71,7 @@ resource "aws_network_acl" "db" {
     protocol   = "tcp"
     rule_no    = 120
     action     = "allow"
-    cidr_block = "10.18.0.0/16"
+    cidr_block = "10.17.0.0/16"
     from_port  = 1024
     to_port    = 65535
   }
