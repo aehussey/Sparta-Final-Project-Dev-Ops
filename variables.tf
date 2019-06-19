@@ -1,5 +1,5 @@
 variable "name" {
-  default="elk_attempt"
+  default="elkattempt"
 }
 
 variable "app_ami_id" {
