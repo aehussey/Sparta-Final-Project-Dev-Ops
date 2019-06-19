@@ -33,7 +33,7 @@ variable "key_name" {
 
 variable "subnets" {
   type = "list"
-  default = ["10.17.0.0/24", "10.17.10.0/24", "10.17.20.0/24"]
+  default = ["10.44.0.0/24", "10.44.10.0/24", "10.44.20.0/24"]
 }
 
 variable "availability_zones" {

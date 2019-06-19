@@ -1,5 +1,5 @@
 variable "name" {
-  default="app-aaron"
+  default="app-JB-route53"
 }
 
 variable "app_ami_id" {
@@ -11,5 +11,5 @@ variable "db_ami_id" {
 }
 
 variable "cidr_block" {
-  default="10.17.0.0/16"
+  default="10.44.0.0/16"
 }

@@ -23,13 +23,17 @@ module "db" {
   internet_gateway = "${aws_internet_gateway.app.id}"
 }
 
+# Route 53
 provider "aws" {
   region  = "eu-west-1"
 }
 
+
 # create a vpc
 resource "aws_vpc" "app" {
   cidr_block = "${var.cidr_block}"
+  enable_dns_hostnames = true
+  enable_dns_support   = true
 
   tags = {
     Name = "${var.name}"
@@ -46,14 +50,15 @@ resource "aws_internet_gateway" "app" {
 }
 
 resource "aws_key_pair" "default" {
-  key_name = "Eng29-final-project"
+  key_name = "Eng29-final-project-JB-route53"
   public_key = "${file("~/.ssh/id_rsa.pub")}"
 }
 
 # load the init template
 data "template_file" "app_init" {
-template = "${file("./scripts/app/init.sh.tpl")}"
-vars = {
-db_host="mongodb://${module.db.db_instance}/24:27017/posts"
-}
+  count = 3
+  template = "${file("./scripts/app/init.sh.tpl")}"
+  vars = {
+  db_host="mongodb://${module.db.db_instance}:27017/posts"
+  }
 }
