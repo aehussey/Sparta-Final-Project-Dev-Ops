@@ -92,7 +92,7 @@ resource "aws_route_table_association" "elk_stack" {
 
 # launch an instance
 resource "aws_instance" "elk_stack" {
-  ami = "ami-02dff0cc503d8a610"
+  ami = "ami-07b8966acd8eca881"
   subnet_id = "${aws_subnet.elk_stack.id}"
   vpc_security_group_ids = ["${aws_security_group.elk_stack.id}"]
   instance_type = "t2.small"

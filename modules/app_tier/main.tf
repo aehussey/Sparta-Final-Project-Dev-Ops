@@ -163,11 +163,14 @@ resource "aws_autoscaling_group" "app" {
   load_balancers = ["${aws_elb.app.name}"]
   health_check_type = "ELB"
 
-  tag {
-      key = "Name"
-      value = "${var.name}"
-      propagate_at_launch = true
-  }
+  tags = [
+      for k, v in local.asg_tags:
+      {
+        key = k
+        value = v
+        propagate_at_launch = true
+      }
+  ]
 }
 
 resource "aws_elb" "app" {
@@ -195,6 +198,9 @@ resource "aws_elb" "app" {
 locals {
   domain_name = "spartaglobal.education."
   record_name = "${var.name}.local"
+  asg_tags = {
+    Name = "${var.name}"
+  }
 }
 
 data "aws_route53_zone" "hosted_zone" {
@@ -244,4 +250,5 @@ resource "aws_route53_record" "dns_record_cname_live" {
 }
 
   set_identifier = "live"
+
 }
