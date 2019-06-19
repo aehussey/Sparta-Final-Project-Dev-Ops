@@ -1,5 +1,5 @@
 variable "name" {
-  default="app-arthur"
+  default="arthur"
 }
 
 variable "app_ami_id" {
