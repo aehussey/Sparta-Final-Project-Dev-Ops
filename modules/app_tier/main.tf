@@ -163,11 +163,14 @@ resource "aws_autoscaling_group" "app" {
   load_balancers = ["${aws_elb.app.name}"]
   health_check_type = "ELB"
 
-  tag {
-      key = "Name"
-      value = "${var.name}"
-      propagate_at_launch = true
-  }
+  tags = [
+      for k, v in local.asg_tags:
+      {
+        key = k
+        value = v
+        propagate_at_launch = true
+      }
+  ]
 }
 
 resource "aws_elb" "app" {
@@ -188,5 +191,11 @@ resource "aws_elb" "app" {
     lb_protocol = "http"
     instance_port = 3000
     instance_protocol = "http"
+  }
+}
+
+locals {
+  asg_tags = {
+    Name = "${var.name}"
   }
 }
