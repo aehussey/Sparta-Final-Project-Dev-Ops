@@ -29,7 +29,7 @@ variable "subnet_cidr_blocks" {
 
 variable "subnets" {
   type = "list"
-  default = ["10.17.1.0/24", "10.17.11.0/24", "10.17.21.0/24"]
+  default = ["10.18.1.0/24", "10.18.11.0/24", "10.18.21.0/24"]
 }
 
 variable "availability_zones" {

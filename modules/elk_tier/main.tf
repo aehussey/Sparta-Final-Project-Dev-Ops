@@ -26,21 +26,21 @@ resource "aws_security_group" "elk_stack"  {
     from_port       = "5044"
     to_port         = "5044"
     protocol        = "tcp"
-    cidr_blocks     = ["10.17.0.0/24"]
+    cidr_blocks     = ["10.18.0.0/24"]
   }
 
   ingress {
     from_port       = "5044"
     to_port         = "5044"
     protocol        = "tcp"
-    cidr_blocks     = ["10.17.10.0/24"]
+    cidr_blocks     = ["10.18.10.0/24"]
   }
 
   ingress {
     from_port       = "5044"
     to_port         = "5044"
     protocol        = "tcp"
-    cidr_blocks     = ["10.17.20.0/24"]
+    cidr_blocks     = ["10.18.20.0/24"]
   }
 
   egress {
