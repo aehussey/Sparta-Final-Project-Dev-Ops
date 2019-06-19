@@ -1,5 +1,5 @@
 variable "name" {
-  default="app-aaron"
+  default="app-engineering29-devops"
 }
 
 variable "app_ami_id" {
