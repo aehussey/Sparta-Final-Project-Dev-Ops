@@ -3,7 +3,7 @@ variable "name" {
 }
 
 variable "app_ami_id" {
-  default="ami-0cc993bb92cca80d3"
+  default="ami-0960c41aea0017088"
 }
 
 variable "db_ami_id" {

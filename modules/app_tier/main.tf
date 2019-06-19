@@ -143,7 +143,7 @@ resource "aws_route_table_association" "app" {
 
 # launch configuration
 resource "aws_launch_configuration" "app" {
-  image_id           = "${var.app_ami_id}"
+  image_id = "${var.app_ami_id}"
   security_groups = ["${aws_security_group.app.id}"]
   user_data = "${var.template_file.0}"
   instance_type = "t2.micro"

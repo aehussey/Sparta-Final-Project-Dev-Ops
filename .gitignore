@@ -1,4 +1,4 @@
 cookbooks
 .terraform
 
-terraform.tfstate*
+*terraform.tfstate*
