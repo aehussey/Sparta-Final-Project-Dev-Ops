@@ -50,7 +50,6 @@ resource "aws_internet_gateway" "app" {
 
 # load the init template
 data "template_file" "app_init" {
-  count = 3
   template = "${file("./scripts/app/init.sh.tpl")}"
   vars = {
   db_host="mongodb://${module.db.db_instance}/24:27017/posts"
