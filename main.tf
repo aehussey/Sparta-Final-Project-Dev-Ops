@@ -63,7 +63,7 @@ resource "aws_internet_gateway" "app" {
 data "template_file" "app_init" {
   template = "${file("./scripts/app/init.sh.tpl")}"
   vars = {
-  db_host="mongodb://${module.db.db_instance}/24:27017/posts"
+  db_host="mongodb://${module.db.db_instance}:27017/posts"
   }
 }
 
