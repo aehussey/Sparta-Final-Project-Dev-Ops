@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![image](screenshotawsarch.png)
+![image](screenshotawsarch.png)
 
 Engineering 29/32 were tasked to build a distributed, highly reliable and fault tolerant architecture to provision a NodeJS/MongoDB Application. A high failover was required for the database driven application.
 
@@ -67,7 +67,14 @@ A list of commonly used resources that the team found helpful are listed in the 
 
 ### Built With
 
-![image](builtwith.png)
+<p align="center">
+  <a href="https://www.spartaglobal.com/?gclid=EAIaIQobChMI-PKZ8Zb44gIV7QrTCh391QcSEAAYASAAEgK_X_D_BwE">
+    <img src= "builtwith.png" alt="Logo" width="360" height="240">
+  </a>
+
+  <h3 align="center">Sparta Global Engineering-29/32 Final Project</h3>
+
+  <p align="center">
 
 Below are a selection of tools was used to build this project.
 * [Amazon Web Services](https://aws.amazon.com)
