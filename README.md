@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://www.spartaglobal.com/?gclid=EAIaIQobChMI-PKZ8Zb44gIV7QrTCh391QcSEAAYASAAEgK_X_D_BwE">
-    <img src= "logo1.png" alt="Logo" width="140" height="140">
+    <img src= "logo1.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Sparta Global Engineering-29/32 Final Project</h3>
@@ -149,18 +149,10 @@ Project Link: [https://github.com/aehussey/Sparta-Final-Project-Dev-Ops](https:/
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
+* [Mongo Replica Set](https://medium.com/@greeshu.renu/how-to-setup-three-member-replica-set-on-amazon-ec2-mongodb-60f0aaddcf32)
+* [Mongo Replica Set 2](https://hackernoon.com/how-to-setup-replicaset-in-standalone-mongodb-cluster-9cd71a3996fb)
+* [Elastic Search](https://github.com/elastic/cookbook-elasticsearch)
+* [ELK Stack](https://github.com/Zuehlke/cookbook-elk-stack)
 
 
 
